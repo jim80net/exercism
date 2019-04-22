@@ -23,4 +23,9 @@ class GigasecondTest < Minitest::Test
   def test_full_time_with_day_roll_over
     assert_equal Time.utc(2046, 10, 3, 1, 46, 39), Gigasecond.from(Time.utc(2015, 1, 24, 23, 59, 59))
   end
+
+  def test_wrong_type
+    assert_raises(RuntimeError) { Gigasecond.from("25 Februrary 2015") }
+    assert_raises(RuntimeError) { Gigasecond.from(1422143999) }
+  end
 end
