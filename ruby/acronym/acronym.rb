@@ -1,8 +1,7 @@
 module Acronym
   def self.abbreviate(text)
     text
-      .split(/[ -]/)
-      .delete_if {|v| ['','-'].include? v}
+      .scan(/\b[a-zA-Z]/)
       .map {|v| v[0].upcase}
       .join
   end
