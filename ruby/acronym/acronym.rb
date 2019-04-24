@@ -1,8 +1,5 @@
 module Acronym
   def self.abbreviate(text)
-    text
-      .scan(/\b[a-zA-Z]/)
-      .map {|v| v[0].upcase}
-      .join
+    text.scan(/\b[a-zA-Z]/).join.upcase
   end
 end
