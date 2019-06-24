@@ -1,4 +1,4 @@
-// A collection of tools to manage heists
+// Package twofer is a collection of tools to manage heists
 package twofer
 
 import "fmt"
