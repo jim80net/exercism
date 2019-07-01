@@ -15,7 +15,7 @@ func Distance(a, b string) (int, error) {
 	}
 
 	var count int
-	for pos, _ := range arunes {
+	for pos := range arunes {
 		// fmt.Printf("Testing a = %#v, b = %#v, position = %#v...", arunes, brunes, pos)
 
 		if arunes[pos] != brunes[pos] {
