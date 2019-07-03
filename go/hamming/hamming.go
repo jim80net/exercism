@@ -11,7 +11,7 @@ func Distance(a, b string) (int, error) {
 	arunes := []rune(a)
 	brunes := []rune(b)
 	if len(arunes) != len(brunes) {
-		return 0, errors.New("Invalid length of comparison string")
+		return 0, errors.New("invalid length of comparison string")
 	}
 
 	var count int
