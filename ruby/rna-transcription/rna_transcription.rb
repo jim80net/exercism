@@ -1,18 +1,8 @@
 module Complement
-  def self.of_dna(nucleotide)
-    nucleotide.split('').map do |v|
-      case v
-      when 'G'
-        'C'
-      when 'C'
-        'G'
-      when 'A'
-        'U'
-      when 'T'
-        'A'
-      else
-        v
-      end
-    end.join('')
+  DNA = 'CATG'
+  RNA = 'GUAC'
+
+  def self.of_dna(nucleotides)
+    nucleotides.tr(DNA, RNA)
   end
 end
