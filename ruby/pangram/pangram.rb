@@ -1,6 +1,6 @@
 module Pangram
   def self.pangram?(arg)
-    test_string = arg.downcase.split('').uniq.sort.join('')
-    test_string.include? "abcdefghijklmnopqrstuvwxyz"
+    test_string = arg.downcase.chars
+    ([*('a'..'z')] - test_string).empty?
   end
 end
