@@ -19,7 +19,7 @@ class SpaceAge
   end
 
   SPACE_AGE_EARTH_YEARS_TO_PLANET_YEARS.keys.each { |key|
-    define_method :"on_#{key.to_s}" do
+    define_method "on_#{key.to_s}" do
       on_earth / SPACE_AGE_EARTH_YEARS_TO_PLANET_YEARS[key]
     end
   }
