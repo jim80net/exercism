@@ -1,6 +1,6 @@
 class SpaceAge
 
-  SPACE_AGE_EARTH_YEARS_TO_PLANET_YEARS = {
+  EARTH_YEARS_TO_PLANET_YEARS = {
     mercury: 0.2408467,
     venus: 0.61519726,
     mars: 1.8808158,
@@ -10,18 +10,18 @@ class SpaceAge
     neptune: 164.79132
   }
 
-  def initialize(seconds)
-    @seconds = seconds.to_f
+  def initialize(time_in_seconds)
+    @time_in_seconds = time_in_seconds.to_f
   end
 
   def on_earth
-    @seconds / 31557600
+    @time_in_seconds / 31557600
   end
 
-  SPACE_AGE_EARTH_YEARS_TO_PLANET_YEARS.keys.each { |key|
-    define_method "on_#{key.to_s}" do
-      on_earth / SPACE_AGE_EARTH_YEARS_TO_PLANET_YEARS[key]
+  EARTH_YEARS_TO_PLANET_YEARS.each do |planet, orbital_period|
+    define_method("on_#{planet.to_s}") do
+      on_earth / orbital_period
     end
-  }
+  end
 
 end
