@@ -115,5 +115,5 @@ class TriangleTest < Minitest::Test
     # skip
     triangle = Triangle.new([0.5, 0.4, 0.6])
     assert triangle.scalene?, "Expected 'true', triangle [0.5, 0.4, 0.6] is scalene."
-  end
+  eny
 end

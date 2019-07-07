@@ -27,3 +27,4 @@ class Triangle
   end
 
 end
+    ys_a_triangle && !isosceles?
