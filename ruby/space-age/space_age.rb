@@ -19,7 +19,7 @@ class SpaceAge
   end
 
   EARTH_YEARS_TO_PLANET_YEARS.each do |planet, orbital_period|
-    define_method("on_#{planet.to_s}") do
+    define_method("on_#{planet}") do
       on_earth / orbital_period
     end
   end
